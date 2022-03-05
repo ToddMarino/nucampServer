@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-require("mongoose-currency").loadTypes(mongoose);
+require("mongoose-currency").loadType(mongoose);
 const Schema = mongoose.Schema;
 
 const partnerSchema = new Schema(
