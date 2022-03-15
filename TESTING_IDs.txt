@@ -1,0 +1,65 @@
+"_id" : ObjectId("622fff4dfda960dbf8400177")
+"name" : "React Lake Campground"
+
+
+"_id" : ObjectId("622fff4dfda960dbf8400178")
+"name" : "Chrome River Campground"
+
+
+"_id" : ObjectId("622fff4dfda960dbf8400179"),
+"name" : "Breadcrumb Trail Campground"
+
+
+***** ---------- /FAVORITES ---------- *****
+
+GET /favorites
+==> []
+
+POST /favorites
+[{"_id" : "622fff4dfda960dbf8400177"}, {"_id" : "622fff4dfda960dbf8400178"}]
+
+==> {
+        "CAMPSITES" : [
+            "622fff4dfda960dbf8400177",
+            "622fff4dfda960dbf8400178"
+        ]
+    }
+
+
+GET /favorites
+==>
+
+[
+    {
+        "campsites" : [
+            {
+                "featured" :false,
+                "_id" : "622fff4dfda960dbf8400177",
+                "name" : "React Lake Campground",
+                 ...
+                 "comments" : []
+            }
+        ],
+        "_id" : "622a66942aea37721cedc006",
+        "user" : {
+            "firstname" : "Todd",
+            "lastname" : "Marino",
+            "admin" : true,
+            "_id" : MY USER ID,
+            "username" : admin"
+            ...
+        }
+    }
+]
+
+*****  ---------- /:FAVORITEID  ---------- *****
+
+POST localhost:3443/favorites/622fff4dfda960dbf8400179
+
+==> {
+        "CAMPSITES" : [
+            "622fff4dfda960dbf8400177",
+            "622fff4dfda960dbf8400178",
+            "622fff4dfda960dbf8400179"
+        ]
+    }
